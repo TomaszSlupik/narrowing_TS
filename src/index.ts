@@ -16,11 +16,12 @@ numberOrString(10)
 const stringOrNull = (el: string | null) => {
     if (!el) {
         console.log('To jest null');
-    } else if (typeof el === 'string') {
-        console.log(el);
-    } else if (Array.isArray(el)) {
-        el.forEach((element: string) => {
-            console.log(element);
-        });
-    }
+    } 
+    else {
+        for (let x of el) {
+            console.log(x)
+        }
+    }  
 };
+
+stringOrNull(null)

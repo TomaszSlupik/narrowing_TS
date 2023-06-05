@@ -15,12 +15,10 @@ const stringOrNull = (el) => {
     if (!el) {
         console.log('To jest null');
     }
-    else if (typeof el === 'string') {
-        console.log(el);
-    }
-    else if (Array.isArray(el)) {
-        el.forEach((element) => {
-            console.log(element);
-        });
+    else {
+        for (let x of el) {
+            console.log(x);
+        }
     }
 };
+stringOrNull(null);
