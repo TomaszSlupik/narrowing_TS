@@ -25,3 +25,37 @@ const stringOrNull = (el: string | null) => {
 };
 
 stringOrNull(null)
+
+// 3 przykład 
+function someDemo (x: string | number, y: string | boolean) {
+    if (x === y) {
+        console.log( x.toUpperCase())
+        console.log(y.toUpperCase();)
+    }
+}
+
+someDemo('trzy', 'trzy')
+
+// Operator IN - "The in Operator"
+interface Movie {
+    title: string,
+    duration: number
+}
+
+interface TVShow {
+    title: string,
+    numEpisodes: number,
+    episodDuration: number
+}
+
+function getRunTime (movie: Movie | TVShow) {
+    if ("numEpisodes" in movie) {
+        console.log(movie.numEpisodes * movie.episodDuration) 
+    }
+        console.log(movie)
+}
+
+getRunTime({title: 'Shrek', duration: 120})
+getRunTime({title: 'Harry Potter', numEpisodes: 80, episodDuration: 60})
+
+// Instance of

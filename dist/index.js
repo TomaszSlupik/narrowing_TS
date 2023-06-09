@@ -22,3 +22,20 @@ const stringOrNull = (el) => {
     }
 };
 stringOrNull(null);
+// 3 przykład 
+function someDemo(x, y) {
+    if (x === y) {
+        console.log(x.toUpperCase());
+        console.log(y.toUpperCase());
+    }
+}
+someDemo('trzy', 'trzy');
+function getRunTime(movie) {
+    if ("numEpisodes" in movie) {
+        console.log(movie.numEpisodes * movie.episodDuration);
+    }
+    console.log(movie);
+}
+getRunTime({ title: 'Shrek', duration: 120 });
+getRunTime({ title: 'Harry Potter', numEpisodes: 80, episodDuration: 60 });
+// Instance of
