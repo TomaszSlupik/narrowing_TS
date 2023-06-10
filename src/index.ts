@@ -30,7 +30,7 @@ stringOrNull(null)
 function someDemo (x: string | number, y: string | boolean) {
     if (x === y) {
         console.log( x.toUpperCase())
-        console.log(y.toUpperCase();)
+        console.log(y.toUpperCase())
     }
 }
 
@@ -59,3 +59,13 @@ getRunTime({title: 'Shrek', duration: 120})
 getRunTime({title: 'Harry Potter', numEpisodes: 80, episodDuration: 60})
 
 // Instance of
+function printAllDate (date: string | Date) {
+    if (date instanceof Date) {
+        console.log(date.toUTCString()) 
+    }
+    else {
+        console.log('To jest String')
+    }
+}
+
+printAllDate(new Date())

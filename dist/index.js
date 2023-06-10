@@ -39,3 +39,12 @@ function getRunTime(movie) {
 getRunTime({ title: 'Shrek', duration: 120 });
 getRunTime({ title: 'Harry Potter', numEpisodes: 80, episodDuration: 60 });
 // Instance of
+function printAllDate(date) {
+    if (date instanceof Date) {
+        console.log(date.toUTCString());
+    }
+    else {
+        console.log('To jest String');
+    }
+}
+printAllDate(new Date());
