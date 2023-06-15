@@ -38,7 +38,7 @@ function getRunTime(movie) {
 }
 getRunTime({ title: 'Shrek', duration: 120 });
 getRunTime({ title: 'Harry Potter', numEpisodes: 80, episodDuration: 60 });
-// Instance of
+// funckja - Instance of
 function printAllDate(date) {
     if (date instanceof Date) {
         console.log(date.toUTCString());
@@ -48,3 +48,14 @@ function printAllDate(date) {
     }
 }
 printAllDate(new Date());
+// class - Instance of
+class User {
+    constructor(username) {
+        this.username = username;
+    }
+}
+class Admin {
+    constructor(name) {
+        this.name = name;
+    }
+}
