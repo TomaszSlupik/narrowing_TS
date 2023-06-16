@@ -80,3 +80,38 @@ class Admin {
     constructor(public name: string) {}
 }
 
+function printName (entity: User | Admin) {
+    if (entity instanceof User) {
+        console.log(entity)
+    }
+    else {
+        console.log(entity)
+    }
+}
+
+printName({name: 'Filip'})
+
+
+// Type predicates
+interface Cat {
+    name: string, 
+    age: number
+}
+
+interface Dog {
+    fast: boolean,
+    big: boolean
+}
+
+function isCat (ageCat: Cat | Dog): ageCat is Cat {
+    return (ageCat as Cat).age !== undefined 
+}
+
+function choiceAnimals (animal: Cat | Dog) {
+    if (isCat(animal)) {
+        return animal
+    }
+    else {
+        animal
+    }
+}

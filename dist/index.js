@@ -59,3 +59,23 @@ class Admin {
         this.name = name;
     }
 }
+function printName(entity) {
+    if (entity instanceof User) {
+        console.log(entity);
+    }
+    else {
+        console.log(entity);
+    }
+}
+printName({ name: 'Filip' });
+function isCat(ageCat) {
+    return ageCat.age !== undefined;
+}
+function choiceAnimals(animal) {
+    if (isCat(animal)) {
+        return animal;
+    }
+    else {
+        animal;
+    }
+}
