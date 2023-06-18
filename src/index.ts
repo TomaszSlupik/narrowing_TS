@@ -109,9 +109,31 @@ function isCat (ageCat: Cat | Dog): ageCat is Cat {
 
 function choiceAnimals (animal: Cat | Dog) {
     if (isCat(animal)) {
-        return animal
+        console.log(animal) 
     }
     else {
-        animal
+        console.log(animal)
     }
 }
+
+choiceAnimals({fast: true, big: true})
+
+// Unions 
+interface Rooster {
+    name: string,
+    age: number, 
+    weight: number
+}
+
+interface Cow {
+    name: string,
+    age: number,
+    weight: number
+}
+
+interface Pig {
+    name: string,
+    age: number,
+    weight: number
+}
+

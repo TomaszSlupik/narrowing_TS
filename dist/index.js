@@ -73,9 +73,10 @@ function isCat(ageCat) {
 }
 function choiceAnimals(animal) {
     if (isCat(animal)) {
-        return animal;
+        console.log(animal);
     }
     else {
-        animal;
+        console.log(animal);
     }
 }
+choiceAnimals({ fast: true, big: true });
