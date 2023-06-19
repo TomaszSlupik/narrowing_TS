@@ -122,18 +122,44 @@ choiceAnimals({fast: true, big: true})
 interface Rooster {
     name: string,
     age: number, 
-    weight: number
+    weight: number, 
+    kind: "rooster"
 }
 
 interface Cow {
     name: string,
     age: number,
-    weight: number
+    weight: number, 
+    kind: "cow"
 }
 
 interface Pig {
     name: string,
     age: number,
-    weight: number
+    weight: number, 
+    kind: "pig"
 }
 
+type FarAnimal = Rooster | Cow | Pig
+
+function choiceFarAnimals (animal: FarAnimal) {
+    switch (animal.kind){
+        case ("rooster"):
+            console.log('kogut')
+        case ("cow"):
+            console.log('krowa')
+        case ("pig"):
+            console.log("świnia")
+        default:
+            console.log('Zwierzęta')
+    }
+}
+
+const cowAnimal: FarAnimal = {
+    name: 'Krowa',
+    age: 2,
+    weight: 50,
+    kind: "cow"
+}
+
+choiceAnimals(cowAnimal)

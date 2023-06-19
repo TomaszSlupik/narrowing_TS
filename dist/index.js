@@ -80,3 +80,22 @@ function choiceAnimals(animal) {
     }
 }
 choiceAnimals({ fast: true, big: true });
+function choiceFarAnimals(animal) {
+    switch (animal.kind) {
+        case ("rooster"):
+            console.log('kogut');
+        case ("cow"):
+            console.log('krowa');
+        case ("pig"):
+            console.log("świnia");
+        default:
+            console.log('Zwierzęta');
+    }
+}
+const cowAnimal = {
+    name: 'Krowa',
+    age: 2,
+    weight: 50,
+    kind: "cow"
+};
+choiceAnimals(cowAnimal);
