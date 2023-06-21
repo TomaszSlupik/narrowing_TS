@@ -163,3 +163,37 @@ const cowAnimal: FarAnimal = {
 }
 
 choiceAnimals(cowAnimal)
+
+// 2 przykład - Unions
+interface Giantbike {
+    name_bike: string,
+    age_bike: number, 
+    kind_bike: "giant"
+}
+
+interface Trekbike {
+    name_bike: string,
+    age_bike: string,
+    kind_bike: "trek"
+}
+
+type Bike = Giantbike | Trekbike
+
+function bikeChoice (bike: Bike) {
+    switch(bike.kind_bike) {
+        case ("trek"):
+            console.log('Wybrałeś rower trek')
+        case ("giant"):
+            console.log("Wybrałeś Gianta")
+        default:
+            return 'Rower'
+    }
+}
+
+bikeChoice({
+    name_bike: "giant",
+    age_bike: 2,
+    kind_bike: "giant"
+})
+
+// 3 przykład - Unions

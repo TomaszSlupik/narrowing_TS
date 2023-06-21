@@ -99,3 +99,19 @@ const cowAnimal = {
     kind: "cow"
 };
 choiceAnimals(cowAnimal);
+function bikeChoice(bike) {
+    switch (bike.kind_bike) {
+        case ("trek"):
+            console.log('Wybrałeś rower trek');
+        case ("giant"):
+            console.log("Wybrałeś Gianta");
+        default:
+            return 'Rower';
+    }
+}
+bikeChoice({
+    name_bike: "giant",
+    age_bike: 2,
+    kind_bike: "giant"
+});
+// 3 przykład - Unions
