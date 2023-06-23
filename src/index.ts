@@ -197,3 +197,31 @@ bikeChoice({
 })
 
 // 3 przykład - Unions
+interface Weathergood {
+    weather: string,
+    long: boolean, 
+    inscription: "pogoda_Ok"   
+}
+
+interface Weatherbad {
+    weather: string, 
+    long: boolean, 
+    inscription: "pogoda_nie"
+}
+
+type Weather = Weathergood | Weatherbad 
+
+function weatherChoice (weatherArguments: Weather) {
+    switch(weatherArguments.inscription) {
+        case "pogoda_Ok":
+            console.log("Pogoda jest super")
+        case "pogoda_nie":
+            console.log("Pogoda jest zła")
+        default:
+            return '----'
+    }
+}
+
+weatherChoice({weather: "Słonecznie",
+long: true,
+inscription: "pogoda_Ok"})

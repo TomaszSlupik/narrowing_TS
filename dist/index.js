@@ -114,4 +114,16 @@ bikeChoice({
     age_bike: 2,
     kind_bike: "giant"
 });
-// 3 przykład - Unions
+function weatherChoice(weatherArguments) {
+    switch (weatherArguments.inscription) {
+        case "pogoda_Ok":
+            console.log("Pogoda jest super");
+        case "pogoda_nie":
+            console.log("Pogoda jest zła");
+        default:
+            return '----';
+    }
+}
+weatherChoice({ weather: "Słonecznie",
+    long: true,
+    inscription: "pogoda_Ok" });
